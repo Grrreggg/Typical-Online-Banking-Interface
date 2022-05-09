@@ -1,0 +1,412 @@
+@font-face {
+    font-family: 'FuturaL';
+    src: URL('../res/fonts/futura/FuturaLightC.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FuturaM';
+    src: URL('../res/fonts/futura/FuturaBookC.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FuturaB';
+    src: URL('../res/fonts/futura/FuturaDemiC.ttf') format('truetype');
+}
+
+*{
+    color: white;
+}
+
+body{
+    background: black
+}
+
+.demo{
+    font-family: 'FuturaM';
+    font-size: 20px;
+    color: white;
+}
+
+.wrap{
+    background: #fc3c44;
+
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 1280px;
+    height: 720px;
+
+    scale: 0.8;
+}
+
+.mobile{
+    width: 390px;
+    height: 844px;
+}
+
+.wrap .nav{
+    border-radius: 10px;
+
+    position: absolute;
+    margin: auto;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+
+    width: 140px;
+    height: 700px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #091d38;
+}
+
+.wrap .nav .button{
+    width: 120px;
+    height: 120px;
+
+    margin: auto;
+
+    position: relative;
+
+    border-radius: 10px;
+}
+
+.wrap .nav .button p{
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+
+    font-size: 20px;
+
+    text-align: center;
+
+    font-family: FuturaL;
+
+    color: #f94c57;
+}
+
+.wrap .nav .button span{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+
+    background-size: contain;
+
+    background-color: #f94c57;
+
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+
+/* active navigation button */
+
+.wrap .nav .active span{
+    background-color: #c2cad7;
+}
+
+.wrap .nav .active p{
+    color: #c2cad7;
+}
+
+/* content area */
+
+.wrap .content{
+    width: calc(100% - 160px);
+    height: 100%;
+    overflow-y: scroll;
+    position: absolute;
+    right: 0;
+}
+
+.wrap .content .block{
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+
+    background: #31406e;
+    position: relative;
+}
+
+.wrap .content .block .title{
+    font-family: FuturaM;
+    font-size: 30px;
+    color: #f94c57;
+
+    margin: 10px;
+    padding-top: 20px;
+}
+
+.wrap .content .block .text{
+    font-family: FuturaL;
+    font-size: 20px;
+    color: #f94c57;
+    margin: 5px 10px;
+}
+
+.wrap .content .block .line{
+    width: 100%; 
+    height: 2px;
+    display: block;
+
+    background: #f94c57;
+}
+
+.wrap .content .block .icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 5px;
+    top: 14px;
+
+    background-size: contain;
+    background-color: #f94c57;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+
+.wrap .content .card{
+    width: 370px;
+    height: 233px;
+
+    margin-top: 10px;
+
+    position: relative;
+}
+
+.wrap .content .card .logo{
+    width: 100px;
+    height: 90px;
+
+    left: auto;
+    bottom: auto;
+
+    right: 0px;
+    top: 0px;
+
+    mask-size: contain;
+    mask-position: center;
+}
+
+.wrap .content .card .number{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+    top: 75px;
+
+    font-family: 'FuturaM';
+    font-size: 30px;
+    word-spacing: 15px;
+    color:#fc3c44;
+}
+
+.wrap .content .card .name, .wrap .content .card .cvc{
+    top: 125px;
+    word-spacing: normal;
+    text-align: left;
+    left: 12px;
+}
+
+.wrap .content .card .cvc{
+    text-align: right;
+    right: 12px;
+    left: auto;
+}
+
+.wrap .content .card .date{
+    top: 170px;
+    text-align: left;
+    left: 12px;
+    font-size: 25px;
+}
+
+.wrap .content .action{
+    width: 70px;
+    height: 70px;
+    background: #31406e;
+    border-radius: 50%;
+    margin: 5%;
+    display: block;
+    position: relative;
+}
+
+.wrap .content .action .icon{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-size: contain;
+    background-color: #f94c57;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+
+.wrap .content .account .title{
+    padding-bottom: 12px;
+}
+
+/* styles for mobile version */
+
+.mobile .nav{
+    left: 0;
+    right: 0;
+    top: auto;
+
+    width: 390px;
+    height: 70px;
+
+    margin: 0 auto;
+
+    flex-direction: row;
+}
+
+.mobile .nav .button{
+    width: 90px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.mobile .nav .button p{
+    font-size: 16px;
+}
+
+.mobile .nav .button span{
+    width: 35px;
+    height: 35px;
+}
+
+.mobile .content{
+    width: 100%;
+    height: calc(100% - 70px);
+    right: auto;
+}
+
+.mobile .content .card{
+    width: 370px;
+    height: 233px;
+
+    margin-top: 10px;
+    margin-bottom: -90px;
+}
+
+/* other */
+
+.shadow{
+    box-shadow:  0px 0px 10px 5px #00000070;
+}
+
+.inset{
+    box-shadow: inset 0px 0px 10px 5px #00000070;
+}
+
+input{
+    background: none;
+    border: none;
+    box-shadow: none;
+
+    color: inherit;
+    font-size: inherit;
+    border-bottom: 1px solid #f94c57;
+}
+
+select{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 50%;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    border-radius: 0;
+    border-bottom: 1px solid #f94c57;
+}
+
+input:focus, select:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+/* SVG icons */
+
+#accounts{
+    mask-image: url(../res/icons/free-icon-font-briefcase-3916670.svg);
+}
+
+#cards{
+    mask-image: url(../res/icons/free-icon-font-credit-card-3916663.svg);
+}
+
+#transfers{
+    mask-image: url(../res/icons/free-icon-font-exchange-6407194.svg);
+}
+
+#messages{
+    mask-image: url(../res/icons/free-icon-font-envelope-3916611.svg);
+}
+
+#settings{
+    mask-image: url(../res/icons/free-icon-font-settings-3917035.svg);
+}
+
+#arrow_right{
+    mask-image: url(../res/icons/free-icon-font-angle-right-3916949.svg);
+}
+
+#arrow_left{
+    mask-image: url(../res/icons/free-icon-font-angle-left-3916954.svg);
+}
+
+#plus{
+    mask-image: url(../res/icons/free-icon-font-plus-3917757.svg);
+}
+
+#yes{
+    mask-image: url(../res/icons/free-icon-font-check-3917039.svg);
+}
+
+#save{
+    mask-image: url(../res/icons/free-icon-font-disk-3917394.svg);
+}
+
+/* logo - different brands, belongs to original owners, fair use */
+
+#visa{
+    mask-image: url(../res/logos/visa.svg);
+}
+
+#mastercard{
+    mask-image: url(../res/logos/mastercard.svg);
+
+    mask-size: 70%;
+}
+
+#jcb{
+    mask-image: url(../res/logos/jcb.svg);
+
+    mask-size: 70%;
+}
+
+#unionpay{
+    mask-image: url(../res/logos/unionpay.svg);
+}
