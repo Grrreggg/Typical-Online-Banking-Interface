@@ -1,5 +1,5 @@
 Typical Online Banking Interface - is an open source project made for fintech startups, banks and other financial organizations in order to help them get online and not waste time developing their own application from ground up. 
-Is is made on Vue.js HTML and pure CSS.
+It is made on Vue.js HTML and pure CSS.
 
 Work in progress.
 Feel free to contribute.

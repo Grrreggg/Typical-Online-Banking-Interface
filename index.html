@@ -3,7 +3,7 @@
     <head>
         <meta name="description" content="Typical fintech app front" />
         <meta charset="utf-8">
-        <title>TFAF</title>
+        <title>TOBI</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="Greg" content="">
         <link rel="stylesheet" href="css/style.css">
@@ -79,6 +79,45 @@
               <span class='icon' id='arrow_left'></span>
             </div>
           </div>
+          
+          <div class='content' v-if="current_page === 'settings'" >
+  
+            <div class='block inset'>
+              <p class='title'>John Woo</p>
+              <span class='header_spacer'></span>
+            </div>
+
+            <div class='block inset'>
+              <p class='title'>App settings:</p>
+              <span class='line inset'></span>
+
+              <p class='sub title'>Notifications 
+                <control_checkbox :active="settings.notifications" :name="'notifications'" @control_checkbox_changed="control_checkbox_changed"></control_checkbox>
+              </p>
+              <p class='sub title'>Use biometrics 
+                <control_checkbox :active="settings.biometrics" :name="'biometrics'" @control_checkbox_changed="control_checkbox_changed"></control_checkbox>
+              </p>
+              <p class='sub title'>Auto login 
+                <control_checkbox :active="settings.autologin" :name="'autologin'" @control_checkbox_changed="control_checkbox_changed"></control_checkbox>
+              </p>
+            </div>
+
+            <div class='block shadow account' @click="">
+              <p class='title'>Change password</p>
+              <span class='icon' id='arrow_right'></span>
+            </div>
+
+            <div class='block shadow account' @click="">
+              <p class='title'>Contact support</p>
+              <span class='icon' id='arrow_right'></span>
+            </div>
+
+            <div class='block shadow account' @click="">
+              <p class='title'>Logout</p>
+              <span class='icon' id='arrow_left'></span>
+            </div>
+  
+          </div>
 
           <navigation :active_element="nav_active_element" @nav_click_event="nav_clicked"></navigation>
           
@@ -95,6 +134,8 @@
     <script src="components/account_new.js"></script>
     <script src="components/nav.js"></script>
     <script src="components/bg.js"></script>
+
+    <script src="components/control_checkbox.js"></script>
 
     <script src="app.js"></script>
 </html>

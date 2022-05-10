@@ -69,14 +69,28 @@ Vue.createApp({
             id:3
           },
         ],
+        user:{
+          name:'John Woo',
+        },
         current_card:{},
+        settings:{
+          notifications:false,
+          biometrics:true,
+          autologin:true,
+        },
       }
+    },
+    mounted(){
+      this.open_tab('settings')
     },
     methods: {      
       // navigation click event handler
       nav_clicked: function (name) {
         this.nav_active_element = name
         this.current_page = name
+      },
+      control_checkbox_changed: function (obj) {
+        this.settings[obj.name] = !this.settings[obj.name]
       },
       open_tab(name, obj){
         if (name == 'account'){
@@ -95,6 +109,9 @@ Vue.createApp({
         }else if(name == 'cards'){
           this.nav_active_element = 'cards'
           this.current_page = 'cards'   
+        }else if(name == 'settings'){
+          this.nav_active_element = 'settings'
+          this.current_page = 'settings'   
         }
       },
     }
@@ -104,4 +121,5 @@ Vue.createApp({
 .component('account_details', account_details)
 .component('account_new', account_new)
 .component('card_single', card_single)
+.component('control_checkbox', control_checkbox)
   .mount('#app')
