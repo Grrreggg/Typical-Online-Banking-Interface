@@ -15,10 +15,10 @@ let account_details = {
         </p>
         <span class='line inset'></span>
         <p class='text'>
-        Recent expenses:
+        Recent history:
         </p>
-        <div v-for="expense in account.expences">
-            <p class='text'>{{expense}}</p>
+        <div v-for="history_el in account.history">
+            <p class='text'>{{history_el}}</p>
         </div> 
     </div>
     `,

@@ -75,6 +75,23 @@
 
             <card_single :card="current_card" :hidden='false' style="margin-bottom: 0px;"></card_single>
 
+            <div class='block inset'>
+              <p class='title'>Info</p>
+             
+              <p class='sub title'>Block card 
+                <control_checkbox :active="current_card.locked" :name="'current_card.id'" @control_checkbox_changed="change_card(current_card)"></control_checkbox>
+              </p>
+  
+              <p class='text'>
+                Recent history:
+              </p>
+
+              <div v-for="history_el in current_card.history">
+                <p class='text'>{{history_el}}</p>
+              </div> 
+
+            </div>
+
             <div class='action shadow' @click="open_tab('cards')">
               <span class='icon' id='arrow_left'></span>
             </div>

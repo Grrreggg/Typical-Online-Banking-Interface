@@ -33,7 +33,7 @@ Vue.createApp({
           iban: 'AT483200000012345864',
           swift: 'SBIN IN BB 455',
           address: '16483 Privet Drive, Little Whinging',
-          expences: ['-19.56$ FoodStor', '-11.46$ GasStar', '-7.35$ Uber'],
+          history: ['-19.56$ FoodStor', '+150.00$ Mike', '-11.46$ FoodStor', '-7.35$ Uber'],
         },
         cards:[
           {
@@ -42,6 +42,8 @@ Vue.createApp({
             name:'John Woo',
             date:'05/35',
             cvc:'123',
+            history: ['-19.56$ FoodStor', '+150.00$ Mike', '-11.46$ GasStar', '-7.35$ Uber'],
+            locked:false,
             id:0
           },
           {
@@ -50,6 +52,8 @@ Vue.createApp({
             name:'John Woo',
             date:'07/37',
             cvc:'456',
+            history: ['-19.56$ FoodStor', '-11.46$ GasStar', '+150.00$ Mike', '-7.35$ Uber'],
+            locked:false,
             id:1
           },
           {
@@ -58,6 +62,8 @@ Vue.createApp({
             name:'John Woo',
             date:'11/56',
             cvc:'789',
+            history: ['-19.56$ FoodStor', '-11.46$ GasStar', '-7.35$ Uber'],
+            locked:false,
             id:2
           },
           {
@@ -66,6 +72,8 @@ Vue.createApp({
             name:'John Woo',
             date:'10/56',
             cvc:'101',
+            history: ['-19.56$ FoodStor', '-11.46$ GasStar', '-7.35$ Uber'],
+            locked:false,
             id:3
           },
         ],
@@ -91,6 +99,9 @@ Vue.createApp({
       },
       control_checkbox_changed: function (obj) {
         this.settings[obj.name] = !this.settings[obj.name]
+      },
+      change_card: function (obj) {
+        this.cards[obj.id].locked = !this.cards[obj.id].locked
       },
       open_tab(name, obj){
         if (name == 'account'){
