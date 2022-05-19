@@ -86,6 +86,11 @@ Vue.createApp({
           biometrics:true,
           autologin:true,
         },
+        test_select:{
+          name:'Test Select',
+          values:[{name:'Option 1',value:0},{name:'Option 2',value:1},{name:'Option 3',value:2},],
+          selected:1,
+        }
       }
     },
     mounted(){
@@ -99,6 +104,9 @@ Vue.createApp({
       },
       control_checkbox_changed: function (obj) {
         this.settings[obj.name] = !this.settings[obj.name]
+      },
+      control_select_changed: function (obj, value) {
+        obj.selected = value
       },
       change_card: function (obj) {
         this.cards[obj.id].locked = !this.cards[obj.id].locked
@@ -133,4 +141,5 @@ Vue.createApp({
 .component('account_new', account_new)
 .component('card_single', card_single)
 .component('control_checkbox', control_checkbox)
+.component('control_select', control_select)
   .mount('#app')

@@ -117,6 +117,10 @@
               <p class='sub title'>Auto login 
                 <control_checkbox :active="settings.autologin" :name="'autologin'" @control_checkbox_changed="control_checkbox_changed"></control_checkbox>
               </p>
+              <p class='sub title'>{{test_select.name}}
+                <control_select :data="test_select" @control_select_changed="control_select_changed"></control_select>
+              </p>
+              <br>
             </div>
 
             <div class='block shadow account' @click="">
@@ -153,6 +157,7 @@
     <script src="components/bg.js"></script>
 
     <script src="components/control_checkbox.js"></script>
+    <script src="components/control_select.js"></script>
 
     <script src="app.js"></script>
 </html>
