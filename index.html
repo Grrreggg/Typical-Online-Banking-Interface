@@ -117,8 +117,11 @@
               <p class='sub title'>Auto login 
                 <control_checkbox :active="settings.autologin" :name="'autologin'" @control_checkbox_changed="control_checkbox_changed"></control_checkbox>
               </p>
-              <p class='sub title'>{{test_select.name}}
-                <control_select :data="test_select" @control_select_changed="control_select_changed"></control_select>
+              <p class='sub title'>{{theme_select.name}}
+                <control_select :data="theme_select" @control_select_changed="control_select_changed"></control_select>
+              </p>
+              <p class='sub title'>Control Input
+                <control_input></control_input>
               </p>
               <br>
             </div>
@@ -158,6 +161,7 @@
 
     <script src="components/control_checkbox.js"></script>
     <script src="components/control_select.js"></script>
+    <script src="components/control_input.js"></script>
 
     <script src="app.js"></script>
 </html>

@@ -86,9 +86,9 @@ Vue.createApp({
           biometrics:true,
           autologin:true,
         },
-        test_select:{
-          name:'Test Select',
-          values:[{name:'Option 1',value:0},{name:'Option 2',value:1},{name:'Option 3',value:2},],
+        theme_select:{
+          name:'App Theme',
+          values:[{name:'Light',value:0},{name:'Dark',value:1},{name:'Black Metal',value:2},],
           selected:1,
         }
       }
@@ -142,4 +142,5 @@ Vue.createApp({
 .component('card_single', card_single)
 .component('control_checkbox', control_checkbox)
 .component('control_select', control_select)
+.component('control_input', control_input)
   .mount('#app')

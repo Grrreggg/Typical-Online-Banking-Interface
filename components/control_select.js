@@ -41,6 +41,5 @@ let control_select = {
         }
     },
     mounted(){
-        console.log(this.data)
     }
 }
