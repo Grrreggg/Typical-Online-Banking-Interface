@@ -109,6 +109,9 @@ Vue.createApp({
       control_select_changed: function (obj, value) {
         obj.selected = value
       },
+      control_input_changed: function (name, value) {
+        this.settings[name] = value
+      },
       change_card: function (obj) {
         this.cards[obj.id].locked = !this.cards[obj.id].locked
       },
