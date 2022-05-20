@@ -85,6 +85,7 @@ Vue.createApp({
           notifications:false,
           biometrics:true,
           autologin:true,
+          input_1:'input 1 value',
         },
         theme_select:{
           name:'App Theme',

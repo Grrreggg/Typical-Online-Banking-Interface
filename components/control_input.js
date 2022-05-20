@@ -1,11 +1,11 @@
 let control_input = {
     template : `
       <span class='control_input'>
-        <input>
+        <input v-model="data">
         <span class='icon_select' id='edit'></span>
       </span>
     `,
-    props: [],
+    props: ['data'],
     data() {
         return {
             selected:'',
